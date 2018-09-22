@@ -18,7 +18,7 @@
 
 ## About
 
-Build for fun at [Init day](https://www.fullfacing.com/).
+Build for fun at [Init day](https://www.fullfacing.com/). Available on [Expo](https://expo.io/@tiaan/dronk).
 
 <div style="display: inline-block;">
     <img width="30%" src="assets/screenshot-1.png">
