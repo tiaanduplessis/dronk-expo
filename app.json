@@ -1,0 +1,35 @@
+{
+  "expo": {
+    "name": "dronk",
+    "description": "The social drinking game",
+    "slug": "dronk",
+    "privacy": "public",
+    "sdkVersion": "30.0.0",
+    "platforms": ["ios", "android"],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "xyz.tiaan.dronk",
+    "primaryColor": "#ffb677",
+    "icon": "src/images/logo.png",
+    "splash": {
+      "image": "assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#fff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 30000
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "xyz.tiaan.dronk",
+      "versionCode": 1,
+      "icon": "src/images/logo.png",
+      "permissions": []
+    }
+  }
+}
