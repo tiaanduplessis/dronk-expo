@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, Animated } from 'react-native'
 import { Button } from 'react-native-paper'
 
 import activeDeck from '../../containers/active-deck'
@@ -9,7 +9,9 @@ class GameDeck extends Component {
     state = {
       text: '',
       isGameDone: false,
-      bgColor: '#ffb677'
+      bgColor: '#ffb677',
+      color: new Animated.Value(0),
+      btnColor: new Animated.Value(0)
     }
 
     async componentDidMount () {
@@ -30,11 +32,22 @@ class GameDeck extends Component {
           text: card ? card(players.state.players) : '',
           isGameDone: !card,
           bgColor: this.getRandomColor()
-        })
+        }, () => this.doTransition())
       } catch (error) {
         console.log(error)
         this.handleBack()
       }
+    }
+
+    doTransition = () => {
+      Animated.timing(this.state.color, {
+        toValue: Math.floor(Math.random() * 256),
+        duration: 400
+      }).start();
+      Animated.timing(this.state.btnColor, {
+        toValue: Math.floor(Math.random() * 256),
+        duration: 400
+      }).start();
     }
 
     handleBack = () => this.props.navigation.goBack()
@@ -46,16 +59,26 @@ class GameDeck extends Component {
       const btnText = isGameDone ? 'New game' : 'Next'
       const btnHandler = isGameDone ? this.handleBack : this.handleNextCard
 
+      let color = this.state.color.interpolate({
+        inputRange: [0, 255],
+        outputRange: ['rgba(20, 100, 211, 1)', 'rgba(200, 29, 10, 1)']
+      });
+
+      let btnColor = this.state.btnColor.interpolate({
+        inputRange: [0, 255],
+        outputRange: ['rgba(20, 100, 211, 1)', 'rgba(200, 29, 10, 1)']
+      });
+
       return (
-        <View style={{ flex: 1, backgroundColor: bgColor }}>
+        <Animated.View style={{ flex: 1 , backgroundColor: color}}>
           <View style={styles.textContainer}>
             <Text style={styles.text}>{currentText}</Text>
           </View>
           <Button
             mode='outlined'
             color='#fff'
-            onPress={btnHandler} style={styles.btn} type='contained' dark>{btnText}</Button>
-        </View>
+            onPress={btnHandler} style={[styles.btn, { backgroundColor: btnColor}]} type='contained' dark>{btnText}</Button>
+        </Animated.View>
       )
     }
 }
