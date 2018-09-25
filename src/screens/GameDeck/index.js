@@ -4,7 +4,7 @@ import { Button } from 'react-native-paper'
 
 import activeDeck from '../../containers/active-deck'
 import players from '../../containers/players'
-import MoraleBoosters from '../../config/moraleBoosters'
+import getRandomMoraleBooster from '../../utils/get-random-morale-booster'
 
 class GameDeck extends Component {
     state = {
@@ -149,7 +149,7 @@ class GameDeck extends Component {
     interimLabel = () =>{
       setTimeout(() => {
         this.setState({
-          text: MoraleBoosters[this.state.currentIndex],
+          text: getRandomMoraleBooster(),
           animating : true
         })
       }, 200);
@@ -189,17 +189,17 @@ class GameDeck extends Component {
         height: mask.height,
         width:mask.width,
         borderRadius: mask.rad,
-        backgroundColor: "white"
+        backgroundColor: "#fff"
       }
 
       return (
-        <Animated.View style={{ flex: 1 , backgroundColor: 'white', overflow: 'hidden'}}>
+        <Animated.View style={styles.container}>
           <Animated.View style={[styles.overlay, overlayStyles]}></Animated.View>
           <Animated.View style={[styles.overlay, maskStyles]}></Animated.View>
           <View style={styles.textContainer}>
             {
               currentIndex === 0 ? null :
-              <Animated.Text style={[styles.text, {color: animating ? color : "white" }]}>{text}</Animated.Text>
+              <Animated.Text style={[styles.text, {color: animating ? color : "#fff" }]}>{text}</Animated.Text>
             }
           </View>
           <Button
@@ -212,6 +212,7 @@ class GameDeck extends Component {
 }
 
 const styles = StyleSheet.create({
+  container: { flex: 1 , backgroundColor: '#fff', overflow: 'hidden'},
   textContainer: { flex: 1, alignItems: 'center', justifyContent: 'center', margin: 10 },
   text: { color: '#fff', textAlign: 'center', fontSize: 30 },
   btn: { margin: 10 },

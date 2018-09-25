@@ -1,4 +1,4 @@
-export default [
+const boosters = [
     "What a legend!",
     "Nou braai ons!",
     "You're a winner!",
@@ -23,3 +23,8 @@ export default [
     "Achievement unlocked!",
     "Level up!"
   ]
+
+  export default function getRandomMoraleBooster() {
+      const i = Math.floor(Math.random() * boosters.length)
+      return boosters[i]
+  }
