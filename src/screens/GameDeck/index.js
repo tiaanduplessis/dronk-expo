@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, Text, StyleSheet, Animated } from 'react-native'
+import { View, StyleSheet, Animated } from 'react-native'
 import { Button } from 'react-native-paper'
 
 import activeDeck from '../../containers/active-deck'
@@ -60,12 +60,12 @@ class GameDeck extends Component {
         Animated.delay(570),
         this.hideOverlay(),
         this.hideMask(),
-        this.openOverlay(),
+        this.openOverlay()
       ]).start()
     }
 
-    openOverlay = () =>{
-      const {width, height, rad} = this.state.overlay
+    openOverlay = () => {
+      const { width, height, rad } = this.state.overlay
       const duration = 300
       return Animated.parallel([
         Animated.timing(this.state.color, {
@@ -91,8 +91,8 @@ class GameDeck extends Component {
       ])
     }
 
-    hideOverlay = () =>{
-      const {width, height, rad} = this.state.overlay
+    hideOverlay = () => {
+      const { width, height, rad } = this.state.overlay
       return Animated.parallel([
         Animated.timing(height, {
           toValue: 0,
@@ -109,27 +109,27 @@ class GameDeck extends Component {
       ])
     }
 
-    openMask = () =>{
-      const {width, height, rad} = this.state.mask
+    openMask = () => {
+      const { width, height, rad } = this.state.mask
       const duration = 300
       return Animated.parallel([
-              Animated.timing(height, {
-                toValue: 1000,
-                duration
-              }),
-              Animated.timing(width, {
-                toValue: 1000,
-                duration
-              }),
-              Animated.timing(rad, {
-                toValue: 500,
-                duration
-              })
-            ])
+        Animated.timing(height, {
+          toValue: 1000,
+          duration
+        }),
+        Animated.timing(width, {
+          toValue: 1000,
+          duration
+        }),
+        Animated.timing(rad, {
+          toValue: 500,
+          duration
+        })
+      ])
     }
 
-    hideMask = () =>{
-      const {width, height, rad} = this.state.mask
+    hideMask = () => {
+      const { width, height, rad } = this.state.mask
       return Animated.parallel([
         Animated.timing(height, {
           toValue: 0,
@@ -146,19 +146,19 @@ class GameDeck extends Component {
       ])
     }
 
-    interimLabel = () =>{
+    interimLabel = () => {
       setTimeout(() => {
         this.setState({
           text: getRandomMoraleBooster(),
-          animating : true
+          animating: true
         })
-      }, 200);
+      }, 200)
     }
 
-    changeLabel = (text) =>{
+    changeLabel = (text) => {
       setTimeout(() => {
-        this.setState({text, animating : false, currentIndex: this.state.currentIndex + 1})
-      }, 1000);
+        this.setState({ text, animating: false, currentIndex: this.state.currentIndex + 1 })
+      }, 1000)
     }
 
     handleBack = () => this.props.navigation.goBack()
@@ -171,12 +171,12 @@ class GameDeck extends Component {
       let color = this.state.color.interpolate({
         inputRange: [0, 255],
         outputRange: ['rgba(20, 100, 211, 1)', 'rgba(200, 29, 10, 1)']
-      });
+      })
 
       let btnColor = this.state.btnColor.interpolate({
         inputRange: [0, 255],
         outputRange: ['rgba(20, 100, 211, 1)', 'rgba(200, 29, 10, 1)']
-      });
+      })
 
       let overlayStyles = {
         height: overlay.height,
@@ -187,9 +187,9 @@ class GameDeck extends Component {
 
       let maskStyles = {
         height: mask.height,
-        width:mask.width,
+        width: mask.width,
         borderRadius: mask.rad,
-        backgroundColor: "#fff"
+        backgroundColor: '#fff'
       }
 
       return (
@@ -198,25 +198,25 @@ class GameDeck extends Component {
           <Animated.View style={[styles.overlay, maskStyles]}></Animated.View>
           <View style={styles.textContainer}>
             {
-              currentIndex === 0 ? null :
-              <Animated.Text style={[styles.text, {color: animating ? color : "#fff" }]}>{text}</Animated.Text>
+              currentIndex === 0 ? null
+                : <Animated.Text style={[styles.text, { color: animating ? color : '#fff' }]}>{text}</Animated.Text>
             }
           </View>
           <Button
             mode='outlined'
             color='#fff'
-            onPress={btnHandler} style={[styles.btn, { backgroundColor: btnColor}]} type='contained' dark>{btnText}</Button>
+            onPress={btnHandler} style={[styles.btn, { backgroundColor: btnColor }]} type='contained' dark>{btnText}</Button>
         </Animated.View>
       )
     }
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1 , backgroundColor: '#fff', overflow: 'hidden'},
+  container: { flex: 1, backgroundColor: '#fff', overflow: 'hidden' },
   textContainer: { flex: 1, alignItems: 'center', justifyContent: 'center', margin: 10 },
   text: { color: '#fff', textAlign: 'center', fontSize: 30 },
   btn: { margin: 10 },
-  overlay:{ backgroundColor: 'black', position: 'absolute', bottom: -250, left: -290}
+  overlay: { backgroundColor: 'black', position: 'absolute', bottom: -250, left: -290 }
 })
 
 export default GameDeck
