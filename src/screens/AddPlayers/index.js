@@ -34,7 +34,7 @@ class AddPlayers extends Component {
     handleChooseDeck = (e) => {
       const { players } = this.state
 
-      if (players.length) {
+      if (!players.length) {
         return
       }
 
