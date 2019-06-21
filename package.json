@@ -12,18 +12,18 @@
     "test": "node_modules/.bin/jest"
   },
   "dependencies": {
-    "expo": "^30.0.1",
-    "nanokit-container": "^1.0.1",
+    "expo": "30.0.1",
+    "nanokit-container": "1.0.1",
     "react": "16.3.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-30.0.0.tar.gz",
-    "react-native-paper": "^2.0.1",
-    "react-navigation": "^2.16.0",
-    "unstated": "^2.1.1"
+    "react-native-paper": "2.0.1",
+    "react-navigation": "2.16.0",
+    "unstated": "2.1.1"
   },
   "devDependencies": {
-    "babel-eslint": "^9.0.0",
-    "jest-expo": "^30.0.0",
-    "standard": "^12.0.1"
+    "babel-eslint": "9.0.0",
+    "jest-expo": "30.0.0",
+    "standard": "12.0.1"
   },
   "standard": {
     "parser": "babel-eslint",

@@ -784,7 +784,7 @@ babel-core@^6.0.0, babel-core@^6.24.1, babel-core@^6.26.0, babel-core@^6.7.2:
     slash "^1.0.0"
     source-map "^0.5.7"
 
-babel-eslint@^9.0.0:
+babel-eslint@9.0.0:
   version "9.0.0"
   resolved "https://registry.yarnpkg.com/babel-eslint/-/babel-eslint-9.0.0.tgz#7d9445f81ed9f60aff38115f838970df9f2b6220"
   dependencies:
@@ -2654,7 +2654,7 @@ expo-sms@~1.0.2:
     expo-core "~1.1.0"
     expo-permissions-interface "~1.1.0"
 
-expo@^30.0.1:
+expo@30.0.1:
   version "30.0.1"
   resolved "https://registry.yarnpkg.com/expo/-/expo-30.0.1.tgz#2fae2d20b2f71d90e9533030d3671f70d4a18814"
   dependencies:
@@ -3753,7 +3753,7 @@ jest-environment-node@^22.4.1:
     jest-mock "^22.4.3"
     jest-util "^22.4.3"
 
-jest-expo@^30.0.0:
+jest-expo@30.0.0:
   version "30.0.0"
   resolved "https://registry.yarnpkg.com/jest-expo/-/jest-expo-30.0.0.tgz#31a540034846d99c65830ae292d4e8bff53c321e"
   dependencies:
@@ -4571,7 +4571,7 @@ nan@^2.9.2:
   version "2.11.0"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.11.0.tgz#574e360e4d954ab16966ec102c0c049fd961a099"
 
-nanokit-container@^1.0.1:
+nanokit-container@1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/nanokit-container/-/nanokit-container-1.0.1.tgz#4a3b4a6fc325987822d989bf7743d3929f7853c5"
   dependencies:
@@ -5232,7 +5232,7 @@ react-native-maps@0.21.0:
     babel-plugin-module-resolver "^2.3.0"
     babel-preset-react-native "1.9.0"
 
-react-native-paper@^2.0.1:
+react-native-paper@2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/react-native-paper/-/react-native-paper-2.0.1.tgz#0221ead52e35811ca6d2ce41cf069d424fe92bcf"
   dependencies:
@@ -5378,7 +5378,7 @@ react-navigation-tabs@0.8.2:
     react-lifecycles-compat "^3.0.4"
     react-native-tab-view "^1.0.0"
 
-react-navigation@^2.16.0:
+react-navigation@2.16.0:
   version "2.16.0"
   resolved "https://registry.yarnpkg.com/react-navigation/-/react-navigation-2.16.0.tgz#9b9320801700baac50e49e87a63641a4df179230"
   dependencies:
@@ -5998,7 +5998,7 @@ standard-engine@~9.0.0:
     minimist "^1.1.0"
     pkg-conf "^2.0.0"
 
-standard@^12.0.1:
+standard@12.0.1:
   version "12.0.1"
   resolved "https://registry.yarnpkg.com/standard/-/standard-12.0.1.tgz#0fc5a8aa6c34c546c5562aae644242b24dae2e61"
   dependencies:
@@ -6327,7 +6327,7 @@ unset-value@^1.0.0:
     has-value "^0.3.1"
     isobject "^3.0.0"
 
-unstated@^2.1.1:
+unstated@2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/unstated/-/unstated-2.1.1.tgz#36b124dfb2e7a12d39d0bb9c46dfb6e51276e3a2"
   dependencies:
