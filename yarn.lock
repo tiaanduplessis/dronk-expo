@@ -4571,9 +4571,9 @@ nan@^2.9.2:
   version "2.11.0"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.11.0.tgz#574e360e4d954ab16966ec102c0c049fd961a099"
 
-nanokit-container@1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/nanokit-container/-/nanokit-container-1.0.1.tgz#4a3b4a6fc325987822d989bf7743d3929f7853c5"
+nanokit-container@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/nanokit-container/-/nanokit-container-2.0.0.tgz#bb1e568dfc2591cc9731e862e49e485065644c03"
   dependencies:
     prop-types "^15.6.0"
     react-docgen "^2.19.0"
