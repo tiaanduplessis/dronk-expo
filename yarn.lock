@@ -429,9 +429,9 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
-"@callstack/react-theme-provider@^1.0.3":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@callstack/react-theme-provider/-/react-theme-provider-1.0.4.tgz#62cb2af8fedb971d509b92c79cc8476c91909477"
+"@callstack/react-theme-provider@^1.0.7":
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/@callstack/react-theme-provider/-/react-theme-provider-1.0.7.tgz#2d2fd1a1d965f36165eaa2e4da28aed1ade75484"
   dependencies:
     create-react-context "^0.2.1"
     deepmerge "^2.1.1"
@@ -1889,7 +1889,7 @@ create-react-context@^0.1.5:
   version "0.1.6"
   resolved "https://registry.yarnpkg.com/create-react-context/-/create-react-context-0.1.6.tgz#0f425931d907741127acc6e31acb4f9015dd9fdc"
 
-create-react-context@^0.2.1, create-react-context@^0.2.2:
+create-react-context@^0.2.1, create-react-context@^0.2.3:
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/create-react-context/-/create-react-context-0.2.3.tgz#9ec140a6914a22ef04b8b09b7771de89567cb6f3"
   dependencies:
@@ -3190,6 +3190,12 @@ has@^1.0.1, has@^1.0.3:
 hoist-non-react-statics@^2.2.0, hoist-non-react-statics@^2.3.1, hoist-non-react-statics@^2.5.0:
   version "2.5.5"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-2.5.5.tgz#c5903cf409c0dfd908f388e619d86b9c1174cb47"
+
+hoist-non-react-statics@^3.1.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-3.3.0.tgz#b09178f0122184fb95acf525daaecb4d8f45958b"
+  dependencies:
+    react-is "^16.7.0"
 
 home-or-tmp@^2.0.0:
   version "2.0.0"
@@ -5193,6 +5199,10 @@ react-is@^16.5.2:
   version "16.5.2"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.5.2.tgz#e2a7b7c3f5d48062eb769fcb123505eb928722e3"
 
+react-is@^16.7.0:
+  version "16.8.6"
+  resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.6.tgz#5bbc1e2d29141c9fbdfed456343fe2bc430a6a16"
+
 react-lifecycles-compat@^3, react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
@@ -5232,15 +5242,16 @@ react-native-maps@0.21.0:
     babel-plugin-module-resolver "^2.3.0"
     babel-preset-react-native "1.9.0"
 
-react-native-paper@2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/react-native-paper/-/react-native-paper-2.0.1.tgz#0221ead52e35811ca6d2ce41cf069d424fe92bcf"
+react-native-paper@2.16.0:
+  version "2.16.0"
+  resolved "https://registry.yarnpkg.com/react-native-paper/-/react-native-paper-2.16.0.tgz#5a9edd5615bb010ec0d29cbfd5524c2944b2505d"
   dependencies:
-    "@callstack/react-theme-provider" "^1.0.3"
+    "@callstack/react-theme-provider" "^1.0.7"
     color "^2.0.1"
-    create-react-context "^0.2.2"
-    hoist-non-react-statics "^2.5.0"
+    create-react-context "^0.2.3"
+    hoist-non-react-statics "^3.1.0"
     react-lifecycles-compat "^3.0.4"
+    react-native-safe-area-view "^0.12.0"
 
 react-native-reanimated@1.0.0-alpha.6:
   version "1.0.0-alpha.6"
@@ -5249,6 +5260,12 @@ react-native-reanimated@1.0.0-alpha.6:
 react-native-safe-area-view@0.11.0:
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/react-native-safe-area-view/-/react-native-safe-area-view-0.11.0.tgz#4f3dda43c2bace37965e7c6aef5fc83d4f19d174"
+  dependencies:
+    hoist-non-react-statics "^2.3.1"
+
+react-native-safe-area-view@^0.12.0:
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/react-native-safe-area-view/-/react-native-safe-area-view-0.12.0.tgz#5c312f087300ecf82e8541c3eac25d560e147f22"
   dependencies:
     hoist-non-react-statics "^2.3.1"
 
