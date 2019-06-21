@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "babel-eslint": "9.0.0",
-    "jest-expo": "30.0.0",
+    "jest-expo": "33.0.2",
     "standard": "12.0.1"
   },
   "standard": {
