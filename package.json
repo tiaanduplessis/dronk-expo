@@ -21,7 +21,7 @@
     "unstated": "2.1.1"
   },
   "devDependencies": {
-    "babel-eslint": "9.0.0",
+    "babel-eslint": "10.0.3",
     "jest-expo": "30.0.0",
     "standard": "14.0.0"
   },
