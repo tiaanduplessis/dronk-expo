@@ -23,7 +23,7 @@
   "devDependencies": {
     "babel-eslint": "10.0.3",
     "jest-expo": "34.0.1",
-    "standard": "14.0.0"
+    "standard": "14.3.1"
   },
   "standard": {
     "parser": "babel-eslint",
