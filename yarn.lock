@@ -4175,9 +4175,9 @@ jest-environment-node@^24.9.0:
     jest-mock "^24.9.0"
     jest-util "^24.9.0"
 
-jest-expo@34.0.1:
-  version "34.0.1"
-  resolved "https://registry.yarnpkg.com/jest-expo/-/jest-expo-34.0.1.tgz#0711b35adb0fa3d543d13de66b0bcdd9b7c7bbc8"
+jest-expo@34.1.0:
+  version "34.1.0"
+  resolved "https://registry.yarnpkg.com/jest-expo/-/jest-expo-34.1.0.tgz#131f3b6dbde841dc6d6e827a2d412c9b13ed9976"
   dependencies:
     babel-jest "^24.7.1"
     jest "^24.7.1"
