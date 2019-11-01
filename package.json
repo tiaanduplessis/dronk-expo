@@ -12,7 +12,7 @@
     "test": "node_modules/.bin/jest"
   },
   "dependencies": {
-    "expo": "30.0.2",
+    "expo": "35.0.1",
     "nanokit-container": "1.0.1",
     "react": "16.9.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-30.0.0.tar.gz",
@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "babel-eslint": "10.0.3",
-    "jest-expo": "34.0.1",
+    "jest-expo": "35.0.0",
     "standard": "14.0.0"
   },
   "standard": {
